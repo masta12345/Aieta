@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembuat Video AI Gratis</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="max-w-3xl mx-auto py-12 px-6">
+    <h1 class="text-3xl font-bold mb-6 text-center">Pembuat Video AI Gratis</h1>
+    <p class="mb-4 text-center">Masukkan teksmu, pilih gaya, dan buat video secara otomatis menggunakan teknologi AI.</p><form id="videoForm" class="space-y-4">
+  <textarea id="inputText" rows="6" class="w-full p-3 border rounded" placeholder="Tulis narasi atau teksmu di sini..."></textarea>
+
+  <select id="videoStyle" class="w-full p-3 border rounded">
+    <option value="cinematic">Cinematic</option>
+    <option value="educational">Edukasi</option>
+    <option value="motivational">Motivasi</option>
+  </select>
+
+  <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Buat Video</button>
+</form>
+
+<div id="videoOutput" class="mt-8 hidden">
+  <h2 class="text-xl font-semibold mb-2">Hasil Videomu:</h2>
+  <video id="generatedVideo" controls class="w-full rounded shadow"></video>
+</div>
+
+  </div>  <script>
+    const form = document.getElementById('videoForm');
+    const videoOutput = document.getElementById('videoOutput');
+    const generatedVideo = document.getElementById('generatedVideo');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const text = document.getElementById('inputText').value;
+      const style = document.getElementById('videoStyle').value;
+
+      // Simulasi pemrosesan AI (harus diganti dengan API nyata seperti Kapwing, Arting, dll)
+      setTimeout(() => {
+        // Ganti URL berikut ini dengan link hasil video dari API
+        generatedVideo.src = "https://samplelib.com/lib/preview/mp4/sample-5s.mp4";
+        videoOutput.classList.remove('hidden');
+      }, 2000);
+    });
+  </script></body>
+</html>
